@@ -3,9 +3,9 @@
 void printWelcomeMenu();
 void printOptions();
 void add();
+void subtract();
 
-
-int main(void) { //int main (void) not void main
+int main(void) { 
 
 	printWelcomeMenu();
 
@@ -14,12 +14,16 @@ int main(void) { //int main (void) not void main
 	int inputNum;
 
 	printf("Enter operation number: ");
-	scanf("%d", &inputNum); //% change
+	scanf("%d", &inputNum); 
 
 	switch (inputNum)
 	{
 	case 1:
 		add();
+		break;
+	case 2:
+		subtract();
+		break;
 	}
 
 }
@@ -45,5 +49,13 @@ void add() {
 	result = num1 + num2;
 	printf("%lf + %lf = %lf\n", num1, num2, result);
 }
+void subtract() {
+	double num1, num2, result;
+	printf("Enter the first value:");
+	scanf("%lf", &num1);
+	printf("Enter the second value:");
+	scanf("%lf", &num2);
+	result = num1 - num2;
+	printf("%lf - %lf = %lf\n", num1, num2, result);
+}
 
-//ooga booga
